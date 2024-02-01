@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    hej
+    <div id="app">
+      <p>{{ animal}}s are a group of animals that are endemic to the {{ origin }}. They are {{ size }} animals. They may live up to {{ lifespan }} years.</p>
+    
+      <div class="accordion-section">
+        <p>Habitat</p>
+        <img @click="toggleShowInfo" src="./assets/next.png" alt="arrow" class="arrow" :class="{ 'rotate': arrowRotated }">
+        <!-- 1* -->
+      </div>
+      <div v-if="showInfo">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum vel
+          delectus repudiandae accusantium exercitationem atque iure facilis nam
+          ducimus, perspiciatis natus nobis tenetur debitis inventore quod
+          veritatis quidem maiores eveniet!
+        </p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!-- 
+    1*. :class is used to dynamically apply one or more classes to an element based on a condition. The syntax :class="{ 'rotate': arrowRotated }" is a shorthand for conditionally applying the class rotate to the element when the arrowRotated property is true. -->
