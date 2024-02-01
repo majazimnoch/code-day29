@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>The amazing Lemurs</h1>
     <div class="container">
       <div class="image-section">
         <div class="class1"></div>
@@ -15,15 +16,15 @@
         <div class="class3"></div>
       </div>
       <div class="text-section" id="app">
-        <p>
+        <h3>
           {{ animal}}s are a group of animals that are endemic to the {{ origin
           }}. They are {{ size }} animals. They may live up to {{ lifespan }}
           years.
-        </p>
+        </h3>
         <div class="accordion-section">
           <div class="part-section">
             <div class="part-section-up">
-              <p>Habitat</p>
+              <h4>Habitat</h4>
               <img
                 @click="toggleShowInfo"
                 src="./assets/next.png"
@@ -47,7 +48,7 @@
 
           <div class="part-section">
             <div class="part-section-up">
-              <p>Characteristics</p>
+              <h4>Diet</h4>
               <img
                 @click="toggleShowChar"
                 src="./assets/next.png"
@@ -59,12 +60,7 @@
             </div>
             <div v-if="showChar">
               <p>
-                Lemurs are exclusively found on the island of Madagascar and
-                nearby Comoros Islands. Their habitat ranges from rainforests
-                and dry forests to spiny forests and mountainous regions. Due to
-                Madagascar's diverse ecosystems, lemurs have adapted to a
-                variety of environments, showcasing their versatility in
-                adapting to different ecological niches.
+                Lemurs are omnivores, and their diet varies based on their species and habitat. They consume a mix of fruits, leaves, flowers, insects, and small vertebrates. The aye-aye, with its specialized finger, is particularly adept at extracting insect larvae from tree bark.
               </p>
             </div>
           </div>

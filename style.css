@@ -1,47 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nanum+Myeongjo:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 56px;
+}
+
 .container {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem 0;
+
+  @media (min-width: 1024px) {
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 3rem 0;
+    margin: 3rem 10rem;
+  }
 }
 .image-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  margin: 0 10rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin: 0 1rem;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    margin: 0 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 50%;
+  }
 }
 
 .text-section {
-    
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem 1rem;
+  gap:2rem;
+
+  @media (min-width: 1024px) {
+    width: 50%;
+    margin: 0rem 1rem;
+  }
 }
 
+h3 {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 25px;
+}
+
+h4 {
+  font-family: "Nanum Myeongjo", serif;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+p {
+  font-family: "Nanum Myeongjo", serif;
+}
 .class1 {
   grid-area: 1 / 1 / 2 / 2;
   background-image: url(./assets/lemur3.jpg);
   background-size: cover;
-  padding: 200px;
+  background-position: 80% 35%;
+  padding: 150px;
+
+  @media (min-width: 1024px) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
 }
 
 .class2 {
-  grid-area: 1 / 2 / 2 / 3;
+  grid-area: 2 / 1 / 3 / 2;
   background-image: url(./assets/lemur2.jpg);
   background-size: cover;
   background-position: center;
+
+  @media (min-width: 1024px) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
 }
 
 .class3 {
-  grid-area: 2 / 1 / 3 / 3;
+  grid-area: 3 / 1 / 4 / 2;
   background-image: url(./assets/lemur1.jpg);
   background-size: cover;
   background-position: center;
+
+  @media (min-width: 1024px) {
+    grid-area: 2 / 1 / 3 / 3;
+  }
 }
 
 img.arrow {
@@ -68,5 +132,13 @@ img.arrow:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: .5rem 0;
+}
+
+.part-section {
+border: 1px black solid;
+  border-radius: 5px;
+  padding: 1.5rem 2rem;
 }
