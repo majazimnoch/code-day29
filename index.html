@@ -8,22 +8,67 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    hej
-    <div id="app">
-      <p>{{ animal}}s are a group of animals that are endemic to the {{ origin }}. They are {{ size }} animals. They may live up to {{ lifespan }} years.</p>
-    
-      <div class="accordion-section">
-        <p>Habitat</p>
-        <img @click="toggleShowInfo" src="./assets/next.png" alt="arrow" class="arrow" :class="{ 'rotate': arrowRotated }">
-        <!-- 1* -->
+    <div class="container">
+      <div class="image-section">
+        <div class="class1"></div>
+        <div class="class2"></div>
+        <div class="class3"></div>
       </div>
-      <div v-if="showInfo">
+      <div class="text-section" id="app">
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum vel
-          delectus repudiandae accusantium exercitationem atque iure facilis nam
-          ducimus, perspiciatis natus nobis tenetur debitis inventore quod
-          veritatis quidem maiores eveniet!
+          {{ animal}}s are a group of animals that are endemic to the {{ origin
+          }}. They are {{ size }} animals. They may live up to {{ lifespan }}
+          years.
         </p>
+        <div class="accordion-section">
+          <div class="part-section">
+            <div class="part-section-up">
+              <p>Habitat</p>
+              <img
+                @click="toggleShowInfo"
+                src="./assets/next.png"
+                alt="arrow"
+                class="arrow"
+                :class="{ 'rotate': arrowRotated }"
+              />
+              <!-- 1* -->
+            </div>
+            <div v-if="showInfo">
+              <p>
+                Lemurs are exclusively found on the island of Madagascar and
+                nearby Comoros Islands. Their habitat ranges from rainforests
+                and dry forests to spiny forests and mountainous regions. Due to
+                Madagascar's diverse ecosystems, lemurs have adapted to a
+                variety of environments, showcasing their versatility in
+                adapting to different ecological niches.
+              </p>
+            </div>
+          </div>
+
+          <div class="part-section">
+            <div class="part-section-up">
+              <p>Characteristics</p>
+              <img
+                @click="toggleShowChar"
+                src="./assets/next.png"
+                alt="arrow"
+                class="arrow"
+                :class="{ 'rotate': arrowRotatedChar }"
+              />
+              <!-- 1* -->
+            </div>
+            <div v-if="showChar">
+              <p>
+                Lemurs are exclusively found on the island of Madagascar and
+                nearby Comoros Islands. Their habitat ranges from rainforests
+                and dry forests to spiny forests and mountainous regions. Due to
+                Madagascar's diverse ecosystems, lemurs have adapted to a
+                variety of environments, showcasing their versatility in
+                adapting to different ecological niches.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="app.js"></script>
