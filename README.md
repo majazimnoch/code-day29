@@ -15,4 +15,4 @@ I made a file `app.js` where I created a const `app` that creates a new Vue appl
 Then there is `methods {...}` that consists of two methods for the Vue instance. These methods toggle the boolean values of certain properties. 
 
 ## Demo
-Click <a href="https://silver-moxie-4b6cbc.netlify.app/">here</a>.
+Click <a href="https://vue-lemurs.netlify.app/">here</a>.
